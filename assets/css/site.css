@@ -250,6 +250,12 @@ body.menu-open .drawer{transform:translateX(0)}
 .pill svg{width:14px;height:14px;color:var(--brand);flex:none}
 .pill-brand{background:var(--brand-tint);border-color:var(--brand-line);color:var(--brand-700)}
 
+/* headline proof figure, e.g. "40+ pharmacies managed" */
+.proof{display:inline-flex;align-items:baseline;gap:11px;margin:0 0 22px;padding:11px 20px;border:1px solid var(--brand-line);background:var(--brand-tint);border-radius:100px}
+.proof b{font-family:var(--fh);font-size:1.6rem;font-weight:800;color:var(--brand);line-height:1;letter-spacing:-.035em}
+.proof span{font-size:.95rem;font-weight:600;color:var(--ink);letter-spacing:-.01em}
+@media (max-width:760px){.proof{padding:9px 16px}.proof b{font-size:1.4rem}.proof span{font-size:.9rem}}
+
 .hero-proof{display:flex;align-items:center;gap:14px;margin-top:30px;padding-top:26px;border-top:1px solid var(--line)}
 .stars{display:flex;gap:2px;color:#e0a800;flex:none}
 .stars svg{width:16px;height:16px}

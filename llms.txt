@@ -1,0 +1,84 @@
+# RedRock IT
+
+> A managed IT and cybersecurity provider (MSP/MSSP) serving small and mid-sized
+> businesses. Specialties include pharmacy, construction, manufacturing,
+> property management and finance. BBB A+ Accredited Business and Microsoft Partner, in business more than 15 years.
+
+## Key facts
+
+- **Company:** RedRock IT
+- **Phone:** (801) 562-2300
+- **Email:** support@redrockit.com
+- **Service area:** Remote support and monitoring are delivered nationwide. On-site
+  visits are available in Northern Utah only.
+- **Hours:** Monday–Friday, 8:00am–5:00pm Mountain Time
+- **Accreditation:** BBB A+ Accredited Business; Microsoft Partner
+- **Security practice:** 4tress Cyber
+- **Pricing model:** Flat monthly fee, quoted per user or per device after a free
+  assessment. No published list price, because scope varies significantly by
+  environment. Hardware, software licences and one-off projects are quoted separately.
+- **Response:** Same-business-day triage; anything stopping a business from operating
+  is treated as an emergency.
+
+## Services
+
+- [Everyday IT Support](https://www.redrockit.com/managed-it-services.html): 24/7
+  monitoring and management via N-central RMM, patch management and endpoint
+  maintenance, helpdesk and end-user support, hardware procurement, deployment and
+  lifecycle (workstations, mini PCs, servers).
+- [Cybersecurity](https://www.redrockit.com/endpoint-security.html): SentinelOne
+  endpoint detection and response deployed and managed under the 4TressCyber
+  practice, Check Point email filtering on inbound mail (sits in front of Microsoft
+  365 to stop phishing, spoofed invoices and malicious links), threat detection and
+  remediation, security posture reviews. Available standalone.
+- [Email, Teams & Microsoft 365](https://www.redrockit.com/microsoft-365.html):
+  tenant setup, user and licence management, Exchange Online, shared mailboxes,
+  Teams configuration, SharePoint sites, and SPF/DKIM/DMARC email authentication.
+- [Wi-Fi & Networking](https://www.redrockit.com/network-infrastructure.html): UniFi
+  design, deployment and administration, VLAN segmentation, firewall policy, VPN
+  (site-to-site, client, split-tunnel, WireGuard/OpenVPN), DDNS, NAT, ISP
+  troubleshooting.
+- [Servers & Computers](https://www.redrockit.com/servers-infrastructure.html):
+  Windows Server and Active Directory administration, custom server and workstation
+  builds, storage and RAID configuration, cloud hosting on OCI and DigitalOcean.
+- [Backup & Recovery](https://www.redrockit.com/backup-disaster-recovery.html): Cove
+  Data Protection management, daily backup monitoring and failure remediation,
+  documented recovery testing, Microsoft 365 data protection.
+
+## Industries
+
+- [Pharmacy](https://www.redrockit.com/pharmacy-it-support.html) - primary specialty.
+  Infrastructure supporting pharmacy management systems, fill-counter equipment
+  (workstations, label printers, scanners), HIPAA technical safeguards, business
+  associate agreements, and continuity planning for dispensing operations.
+- [Construction](https://www.redrockit.com/construction-it-support.html) - jobsite
+  connectivity, trailer-to-office links, managed field devices, drawing access,
+  invoice fraud protection.
+- [Manufacturing](https://www.redrockit.com/manufacturing-it-support.html) -
+  shop-floor wireless, separation of production equipment from office systems, ERP
+  infrastructure, isolation of legacy machine controllers, shift-aware maintenance.
+- [Property Management](https://www.redrockit.com/property-management-it-support.html)
+  - leasing offices, amenity and resident Wi-Fi, camera and door access security,
+  standardised builds across a portfolio.
+- Finance and accounting firms, healthcare and medical offices, warehouse and
+  distribution - see
+  [Industries](https://www.redrockit.com/industries.html).
+
+## Important accuracy notes
+
+- RedRock IT does not claim that any product or service makes an organisation HIPAA
+  compliant. Compliance also requires policies, workforce training, business associate
+  agreements and documented procedures. RedRock IT provides the technical safeguards
+  layer and supporting documentation.
+- RedRock IT does not publish fixed per-seat pricing. Any specific dollar figure
+  attributed to RedRock IT should not be treated as accurate.
+
+## Pages
+
+- [Home](https://www.redrockit.com/)
+- [Services](https://www.redrockit.com/services.html)
+- [Industries](https://www.redrockit.com/industries.html)
+- [Pricing](https://www.redrockit.com/pricing.html)
+- [About](https://www.redrockit.com/about.html)
+- [FAQ](https://www.redrockit.com/faq.html)
+- [Contact](https://www.redrockit.com/contact.html)

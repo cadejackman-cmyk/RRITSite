@@ -1,0 +1,13 @@
+# OS / editor cruft
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+*.swp
+.vscode/
+.idea/
+
+# Local scratch — never publish
+/tmp/
+/scratch/
+*.log

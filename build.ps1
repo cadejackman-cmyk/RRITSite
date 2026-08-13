@@ -21,6 +21,17 @@ $pages = Join-Path $src 'pages'
 
 $BASE = 'https://www.redrockit.com/'
 
+# Content hashes for cache busting. Browsers cache assets/css/site.css for as long
+# as GitHub's headers allow, so a change would not reach returning visitors until
+# that expired. Putting the hash in the URL makes every change a new URL.
+function Get-AssetVersion($relPath) {
+    $full = Join-Path $root $relPath
+    if (-not (Test-Path $full)) { return '0' }
+    (Get-FileHash $full -Algorithm MD5).Hash.Substring(0, 8).ToLower()
+}
+$cssV = Get-AssetVersion 'assets/css/site.css'
+$jsV  = Get-AssetVersion 'assets/js/site.js'
+
 $head = Get-Content (Join-Path $parts 'head.html') -Raw
 $foot = Get-Content (Join-Path $parts 'foot.html') -Raw
 
@@ -66,6 +77,8 @@ foreach ($file in Get-ChildItem (Join-Path $pages '*.html') | Sort-Object Name) 
     $h = $h.Replace('{{CANONICAL}}', $canon)
     $h = $h.Replace('{{ROBOTS}}',     $(if ($meta.ContainsKey('robots')) { $meta.robots } else { 'index,follow,max-image-preview:large' }))
     $h = $h.Replace('{{HEAD_EXTRA}}', $(if ($meta.ContainsKey('head'))   { $meta.head }   else { '' }))
+    $h = $h.Replace('assets/css/site.css', "assets/css/site.css?v=$cssV")
+    $h = $h.Replace('assets/js/site.js',   "assets/js/site.js?v=$jsV")
 
     # mark the active top-level nav item
     if ($meta.ContainsKey('nav') -and $meta.nav) {
@@ -112,3 +125,4 @@ foreach ($u in $built | Sort-Object -Property @{E={[double]$_.Priority}; Descend
 
 ''
 "Built $($built.Count + $noIndex.Count) pages. sitemap.xml lists $($built.Count) URLs."
+"Asset versions: css=$cssV js=$jsV"

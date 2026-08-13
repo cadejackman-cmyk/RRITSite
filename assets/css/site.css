@@ -110,10 +110,6 @@ hr{border:0;border-top:1px solid var(--line);margin:2.5rem 0}
 .addr{font-style:normal;font-size:.9rem;line-height:1.6;color:var(--ink-2);margin-top:14px}
 .addr strong{color:var(--ink)}
 
-/* bordered card sitting on a dark band */
-.card-onDark{background:transparent;border-color:rgba(255,255,255,.14)}
-.card-onDark p{color:rgba(255,255,255,.7)}
-
 /* ---------- Section heading kit ---------- */
 .eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:.735rem;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--brand);margin-bottom:14px;font-family:var(--ff)}
 .eyebrow::before{content:"";width:22px;height:2px;background:var(--brand);border-radius:2px;flex:none}
@@ -154,6 +150,12 @@ hr{border:0;border-top:1px solid var(--line);margin:2.5rem 0}
 .card-link:hover h3{color:var(--brand)}
 .card-body{flex:1}
 .card-foot{margin-top:18px;padding-top:0}
+
+/* card sitting on a dark band — must come after .card and match its specificity
+   with .card.card-onDark, or .card's white background wins */
+.card.card-onDark{background:transparent;border-color:rgba(255,255,255,.14)}
+.card.card-onDark h3{color:#fff}
+.card.card-onDark p{color:rgba(255,255,255,.7)}
 
 /* icon tile */
 .ico{width:46px;height:46px;border-radius:9px;display:grid;place-items:center;background:var(--brand-tint);border:1px solid var(--brand-line);color:var(--brand);margin-bottom:18px;flex:none}

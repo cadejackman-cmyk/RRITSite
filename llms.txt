@@ -23,47 +23,47 @@
 
 ## Services
 
-- [Everyday IT Support](https://www.redrockit.com/managed-it-services.html): 24/7
+- [Everyday IT Support](https://redrockit.com/managed-it-services.html): 24/7
   monitoring and management via N-central RMM, patch management and endpoint
   maintenance, helpdesk and end-user support, hardware procurement, deployment and
   lifecycle (workstations, mini PCs, servers).
-- [Cybersecurity](https://www.redrockit.com/endpoint-security.html): SentinelOne
+- [Cybersecurity](https://redrockit.com/endpoint-security.html): SentinelOne
   endpoint detection and response deployed and managed under the 4TressCyber
   practice, Check Point email filtering on inbound mail (sits in front of Microsoft
   365 to stop phishing, spoofed invoices and malicious links), threat detection and
   remediation, security posture reviews. Available standalone.
-- [Email, Teams & Microsoft 365](https://www.redrockit.com/microsoft-365.html):
+- [Email, Teams & Microsoft 365](https://redrockit.com/microsoft-365.html):
   tenant setup, user and licence management, Exchange Online, shared mailboxes,
   Teams configuration, SharePoint sites, and SPF/DKIM/DMARC email authentication.
-- [Wi-Fi & Networking](https://www.redrockit.com/network-infrastructure.html): UniFi
+- [Wi-Fi & Networking](https://redrockit.com/network-infrastructure.html): UniFi
   design, deployment and administration, VLAN segmentation, firewall policy, VPN
   (site-to-site, client, split-tunnel, WireGuard/OpenVPN), DDNS, NAT, ISP
   troubleshooting.
-- [Servers & Computers](https://www.redrockit.com/servers-infrastructure.html):
+- [Servers & Computers](https://redrockit.com/servers-infrastructure.html):
   Windows Server and Active Directory administration, custom server and workstation
   builds, storage and RAID configuration, cloud hosting on OCI and DigitalOcean.
-- [Backup & Recovery](https://www.redrockit.com/backup-disaster-recovery.html): Cove
+- [Backup & Recovery](https://redrockit.com/backup-disaster-recovery.html): Cove
   Data Protection management, daily backup monitoring and failure remediation,
   documented recovery testing, Microsoft 365 data protection.
 
 ## Industries
 
-- [Pharmacy](https://www.redrockit.com/pharmacy-it-support.html) - primary specialty,
+- [Pharmacy](https://redrockit.com/pharmacy-it-support.html) - primary specialty,
   40+ pharmacies managed.
   Infrastructure supporting pharmacy management systems, fill-counter equipment
   (workstations, label printers, scanners), HIPAA technical safeguards, business
   associate agreements, and continuity planning for dispensing operations.
-- [Construction & Manufacturing](https://www.redrockit.com/construction-manufacturing-it-support.html)
+- [Construction & Manufacturing](https://redrockit.com/construction-manufacturing-it-support.html)
   - 20+ construction and manufacturing groups supported. Jobsite connectivity,
   trailer-to-office links, managed field devices, shop-floor wireless, separation of
   production equipment from office systems, isolation of legacy machine controllers,
   shift-aware maintenance windows.
-- [Property Management](https://www.redrockit.com/property-management-it-support.html)
+- [Property Management](https://redrockit.com/property-management-it-support.html)
   - 700+ properties supported. Leasing offices, amenity and resident Wi-Fi, camera
   network security, standardized builds across a portfolio.
 - Finance and accounting firms, healthcare and medical offices, warehouse and
   distribution - see
-  [Industries](https://www.redrockit.com/industries.html).
+  [Industries](https://redrockit.com/industries.html).
 
 ## Important accuracy notes
 
@@ -76,10 +76,10 @@
 
 ## Pages
 
-- [Home](https://www.redrockit.com/)
-- [Services](https://www.redrockit.com/services.html)
-- [Industries](https://www.redrockit.com/industries.html)
-- [Pricing](https://www.redrockit.com/pricing.html)
-- [About](https://www.redrockit.com/about.html)
-- [FAQ](https://www.redrockit.com/faq.html)
-- [Contact](https://www.redrockit.com/contact.html)
+- [Home](https://redrockit.com/)
+- [Services](https://redrockit.com/services.html)
+- [Industries](https://redrockit.com/industries.html)
+- [Pricing](https://redrockit.com/pricing.html)
+- [About](https://redrockit.com/about.html)
+- [FAQ](https://redrockit.com/faq.html)
+- [Contact](https://redrockit.com/contact.html)

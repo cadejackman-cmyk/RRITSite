@@ -19,7 +19,7 @@ $src   = Join-Path $root '_src'
 $parts = Join-Path $src 'partials'
 $pages = Join-Path $src 'pages'
 
-$BASE = 'https://www.redrockit.com/'
+$BASE = 'https://redrockit.com/'
 
 # Content hashes for cache busting. Browsers cache assets/css/site.css for as long
 # as GitHub's headers allow, so a change would not reach returning visitors until

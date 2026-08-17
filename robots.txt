@@ -15,4 +15,4 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
-Sitemap: https://www.redrockit.com/sitemap.xml
+Sitemap: https://redrockit.com/sitemap.xml

@@ -1,0 +1,14 @@
+# RedRock IT - security contact information (RFC 9116)
+# If you have found a security issue in this website or in any system we
+# operate, please tell us. We will acknowledge your report and keep you
+# updated on what we do about it.
+
+Contact: https://redrockit.com/contact.html
+Contact: mailto:support@redrockit.com
+Contact: tel:+1-801-562-2300
+Expires: 2027-08-20T00:00:00.000Z
+Preferred-Languages: en
+Canonical: https://redrockit.com/.well-known/security.txt
+
+# Please do not run automated scanning that degrades service for our clients,
+# and do not access, modify or retain any data that is not your own.

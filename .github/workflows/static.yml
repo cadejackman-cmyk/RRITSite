@@ -33,6 +33,10 @@ jobs:
         uses: actions/checkout@v4
       - name: Setup Pages
         uses: actions/configure-pages@v5
+      - name: Strip build sources from the artifact
+        # The deployed site is the flat HTML at the repo root. The page sources,
+        # partials and build script are not part of it and must never be served.
+        run: rm -rf _src build.ps1 README.md
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

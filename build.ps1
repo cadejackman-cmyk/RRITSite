@@ -229,8 +229,13 @@ foreach ($p in $srcPages) {
 
     $out = $h + $body.TrimEnd() + $extra + "`n" + $foot
 
-    # ---- fix the partials' relative links for pages one directory down ----
-    if ($isBlog) { $out = ConvertTo-RootRelative $out }
+    # ---- links that must not be relative --------------------------------
+    # Blog pages sit one directory down. The 404 page is worse: nginx serves it
+    # at whatever URI the visitor asked for, so a relative asset link resolves
+    # against that path and breaks on anything except a single root-level
+    # segment (/nope works, /nope/ and /blog/nope do not). Root-relative is the
+    # only form that renders correctly from every depth.
+    if ($isBlog -or $p.Name -eq '404.html') { $out = ConvertTo-RootRelative $out }
 
     # strip leftover placeholders so nothing ships half-substituted
     if ($out -match '\{\{[A-Z_]+\}\}') {

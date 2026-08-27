@@ -1,0 +1,171 @@
+<!--META
+title: Small Business Cybersecurity Checklist: 12 Things to Fix First | RedRock IT
+desc: A practical cybersecurity checklist for small businesses, in the order that actually reduces risk. What to fix this week, what to fix this quarter, and what your cyber insurance will ask for.
+h1: Small business cybersecurity checklist: 12 things to fix first
+nav: blog
+date: 2026-08-22
+category: Cybersecurity
+read: 10
+excerpt: Small businesses get attacked because they are easy, not because they are interesting. These twelve items, roughly in this order, remove most of that easiness.
+-->
+
+<section class="sec sec-sm">
+  <div class="wrap-sm">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a href="index.html">Home</a>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+      <a href="blog/">Blog</a>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+      <span>Cybersecurity checklist</span>
+    </nav>
+    <span class="pill pill-brand u-mb-sm">Cybersecurity</span>
+    <h1>Small business cybersecurity checklist: 12 things to fix first</h1>
+    <p class="note-sm"><time datetime="2026-08-22">August 22, 2026</time> &middot; 10 min read</p>
+    <p class="lead">Almost nobody targets a small business by name. They get in because a scan found an easy way and nobody was watching. This list is ordered by how much risk each item removes for the effort it takes.</p>
+  </div>
+</section>
+
+<section class="sec sand bordered">
+  <div class="wrap-sm">
+    <div class="facts">
+      <h2>If you only do three things</h2>
+      <dl>
+        <dt>1</dt><dd>Turn on multi-factor authentication for email, everywhere, no exceptions</dd>
+        <dt>2</dt><dd>Get a backup running that a compromised computer cannot delete, and test a restore</dd>
+        <dt>3</dt><dd>Put monitored endpoint protection on every machine, including the one in the back office</dd>
+      </dl>
+      <p class="note-sm">Those three cover the overwhelming majority of what actually happens to small businesses.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap-sm prose">
+    <h2>Fix this week</h2>
+
+    <h3>1. Multi-factor authentication on email</h3>
+    <p>Email is the master key. Whoever controls it can reset the password on nearly everything else, read your invoices and email your customers as you. Stolen passwords are cheap and plentiful, and MFA is what makes a stolen password useless on its own.</p>
+    <p>Turn it on for every account including the owner, the shared info@ mailbox and anyone who left but whose account still exists. Use an authenticator app rather than text messages where you can. If you are on Microsoft 365, this is a setting, not a purchase.</p>
+
+    <h3>2. Find out who still has access</h3>
+    <p>Every business we look at has at least one account belonging to someone who left. Sometimes several. List every account in your email system, your accounting software and your line of business system, and disable anything that is not a current employee. Then check which accounts are administrators, because it is usually more than it should be.</p>
+
+    <h3>3. Check your backups actually ran, and restore something</h3>
+    <p>Most businesses have a backup. Fewer have a backup that finished, and fewer still have ever restored from it. Open the console, confirm the last successful run, then actually restore a file and open it.</p>
+    <p>The important part for ransomware: at least one copy has to be somewhere a compromised machine cannot reach or delete. Modern ransomware looks for the backup first. A USB drive left plugged in permanently is not protection.</p>
+
+    <h3>4. Look at what is protecting each computer</h3>
+    <p>Walk the list of machines and check what is installed, whether it is current, and whether anyone would find out if it alerted. The gap is usually not the main office computers, it is the one machine at the back running a specific piece of equipment that everyone forgot about. See our longer piece on <a href="blog/best-antivirus-for-pharmacy.html">choosing endpoint protection</a> for what to look for.</p>
+
+    <h2>Fix this month</h2>
+
+    <h3>5. Patch Windows and the software on it</h3>
+    <p>Not just Windows Update. Browsers, PDF readers, Java if you still have it, and whatever line of business software you run. Attackers use known holes with published fixes far more often than anything clever. This should be automatic and reported on, not something someone remembers to do.</p>
+
+    <h3>6. Replace anything running unsupported software</h3>
+    <p>An operating system past end of support stops receiving security fixes entirely. It will keep working, which is exactly why it lingers. It is also the machine that gets used to get in, and it will fail a cyber insurance questionnaire.</p>
+
+    <h3>7. Stop everyone being an administrator</h3>
+    <p>If staff log in with accounts that can install software, then anything they run can install software too. Day-to-day accounts should be standard users, with a separate admin account for when it is genuinely needed. This one change stops a large share of malware from ever getting a foothold.</p>
+
+    <h3>8. Sort out passwords properly</h3>
+    <p>Not a spreadsheet, not a shared document, not the same password with a number on the end. A business password manager, unique passwords everywhere, and shared credentials held in a vault rather than in someone's head or on a sticky note under a keyboard. It also solves the awkward problem of what happens when that person leaves.</p>
+
+    <h3>9. Train people on the three scams that actually land</h3>
+    <p>Skip the hour-long course. Most small business losses come from three things:</p>
+    <ul>
+      <li><strong>A fake login page.</strong> An email says a document is waiting, the page looks exactly like Microsoft, the password goes to someone else.</li>
+      <li><strong>A changed bank account.</strong> An email that appears to be from a supplier or the owner asks for payment details to be updated. Always verify by phone on a number you already had.</li>
+      <li><strong>Urgency from the boss.</strong> A message claiming to be the owner, needing something done quickly and quietly.</li>
+    </ul>
+    <p>Give staff explicit permission to slow down and check. That is worth more than any slide deck.</p>
+
+    <h2>Fix this quarter</h2>
+
+    <h3>10. Put a real firewall in, and separate your networks</h3>
+    <p>The box the internet provider supplied is not a business firewall. You want something maintained and updated, with guest Wi-Fi kept completely separate from the network your computers and card terminals sit on. If you have cameras, smart TVs or door controllers, those belong on their own segment too. They are rarely updated and they are a common way in.</p>
+
+    <h3>11. Get monitoring with a person attached</h3>
+    <p>This is the difference between having security tools and being protected. Detection that nobody reads is a log file. Ask directly: when something triggers at 3am, who sees it, how fast, and what can they do without waiting for me?</p>
+
+    <h3>12. Write down what you would do on a bad day</h3>
+    <p>One page is enough. Who to call first, how you keep serving customers while systems are down, where the backups are and how long a restore takes, who tells staff and customers, and your cyber insurance policy number and claims line. Nobody thinks clearly at 6am with everything encrypted. Print it, because if it only exists on the network you cannot read it.</p>
+
+    <h2>What cyber insurance will ask you</h2>
+    <p>Renewal questionnaires have become genuinely strict, and answering optimistically can leave you with a policy that will not pay. Expect to be asked about multi-factor authentication on email and remote access, endpoint detection and response, offline or immutable backups, whether you run any unsupported systems, how administrator accounts are controlled, and whether you run staff security training.</p>
+    <p>Work through this list and most of those answers become straightforwardly yes, with evidence behind them.</p>
+
+    <h2>The honest summary</h2>
+    <p>None of this makes you unbreakable, and anyone promising that is selling something. What it does is move you out of the group that gets caught by automated attacks, which is where nearly all small business incidents come from. The first four items on this list cost very little and remove most of the risk. The rest is steady maintenance rather than a project.</p>
+    <p>If you would rather not work through it alone, that is what our <a href="endpoint-security.html">cybersecurity service</a> covers, and a <a href="contact.html">free IT check-up</a> will tell you where you currently stand on every item above.</p>
+
+    <div class="sec-cta"><a class="arrow-link" href="contact.html">Find out where you stand <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+  </div>
+</section>
+
+<section class="sec sand bordered">
+  <div class="wrap-sm">
+    <div class="sec-head center">
+      <span class="eyebrow">Questions</span>
+      <h2>Common questions</h2>
+    </div>
+    <div class="faq">
+      <details open>
+        <summary>Are small businesses really targeted by hackers?</summary>
+        <div class="faq-a"><p>Not usually by name. Most attacks are automated: something scans huge numbers of addresses looking for a known weakness or tries stolen passwords across many sites at once. Small businesses get caught because they are easy, not because someone chose them.</p></div>
+      </details>
+      <details>
+        <summary>What is the single most important thing to do first?</summary>
+        <div class="faq-a"><p>Multi-factor authentication on email. It is free on most platforms, takes an afternoon, and stops the most common way small businesses lose money.</p></div>
+      </details>
+      <details>
+        <summary>Is antivirus enough on its own?</summary>
+        <div class="faq-a"><p>No. Antivirus is necessary but it only covers one route in. It does nothing about a stolen password, a staff member typing details into a convincing fake login page, or a backup that has quietly not run for months.</p></div>
+      </details>
+      <details>
+        <summary>How much should a small business spend on cybersecurity?</summary>
+        <div class="faq-a"><p>Less than most people expect for the basics. The first four items on this list are mostly configuration rather than purchases. Ongoing monitored protection is normally a modest per-computer monthly cost, and it is generally cheaper than the deductible on a cyber insurance claim.</p></div>
+      </details>
+      <details>
+        <summary>We use Microsoft 365, is that not already secure?</summary>
+        <div class="faq-a"><p>Microsoft secures the platform. Your account settings, who has access, whether MFA is enforced, and whether anyone is watching the alerts are all your responsibility. Microsoft also does not keep a long-term backup of your mail and files in the way most people assume.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!--INCLUDE:cta-->
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {
+      "@type":"Question",
+      "name":"Are small businesses really targeted by hackers?",
+      "acceptedAnswer":{"@type":"Answer","text":"Not usually by name. Most attacks are automated: something scans huge numbers of addresses looking for a known weakness or tries stolen passwords across many sites at once. Small businesses get caught because they are easy, not because someone chose them."}
+    },
+    {
+      "@type":"Question",
+      "name":"What is the single most important cybersecurity step for a small business?",
+      "acceptedAnswer":{"@type":"Answer","text":"Multi-factor authentication on email. It is free on most platforms, takes an afternoon, and stops the most common way small businesses lose money."}
+    },
+    {
+      "@type":"Question",
+      "name":"Is antivirus enough on its own for a small business?",
+      "acceptedAnswer":{"@type":"Answer","text":"No. Antivirus is necessary but it only covers one route in. It does nothing about a stolen password, a staff member typing details into a convincing fake login page, or a backup that has quietly not run for months."}
+    },
+    {
+      "@type":"Question",
+      "name":"How much should a small business spend on cybersecurity?",
+      "acceptedAnswer":{"@type":"Answer","text":"Less than most people expect for the basics. The first four items are mostly configuration rather than purchases. Ongoing monitored protection is normally a modest per-computer monthly cost, and it is generally cheaper than the deductible on a cyber insurance claim."}
+    },
+    {
+      "@type":"Question",
+      "name":"We use Microsoft 365, is that not already secure?",
+      "acceptedAnswer":{"@type":"Answer","text":"Microsoft secures the platform. Your account settings, who has access, whether MFA is enforced, and whether anyone is watching the alerts are all your responsibility. Microsoft also does not keep a long-term backup of your mail and files in the way most people assume."}
+    }
+  ]
+}
+</script>

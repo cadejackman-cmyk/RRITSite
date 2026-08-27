@@ -16,3 +16,4 @@ User-agent: Google-Extended
 Allow: /
 
 Sitemap: https://redrockit.com/sitemap.xml
+Sitemap: https://redrockit.com/sitemap-blog.xml

@@ -1,4 +1,4 @@
-# RedRock IT — website
+# RedRock IT website
 
 Static site for [redrockit.com](https://www.redrockit.com/). No frameworks, no
 runtime dependencies, no database. GitHub Pages serves the `.html` files in the
@@ -6,7 +6,7 @@ repository root exactly as they are.
 
 ## How it is put together
 
-The root `.html` files are **generated output** — don't edit them directly, they get
+The root `.html` files are **generated output** - don't edit them directly, they get
 overwritten. The sources live in `_src/`:
 
 ```
@@ -49,7 +49,7 @@ Structured data (JSON-LD) sits inline at the foot of each page source.
 
 - **No inline styles.** Everything is a class in `assets/css/site.css`. A small set
   of `.u-*` spacing utilities exists for one-off adjustments.
-- **Design tokens** are CSS custom properties at the top of the stylesheet — colour,
+- **Design tokens** are CSS custom properties at the top of the stylesheet - colour,
   spacing, radii, shadows, fonts. Change a brand colour in one place.
 - **Icons are inline SVG.** No icon font, no sprite request.
 - **Fonts are self-hosted** (`assets/fonts/`) and preloaded. The site makes no
@@ -78,7 +78,7 @@ URL like `username.github.io/RRITSite/`. Only the canonical tags, Open Graph URL
 ## Contact form
 
 The contact page embeds a Microsoft Form. To change the questions, edit it in
-Microsoft Forms — nothing on this site needs updating.
+Microsoft Forms - nothing on this site needs updating.
 
 Microsoft Forms does not report its height to the parent page, so the iframe height
 is set manually in `.ms-form` (`assets/css/site.css`). If you add or remove
@@ -91,7 +91,7 @@ space below the form.
 - JSON-LD: `Organization`, `LocalBusiness` (both offices), `Service`, `FAQPage`,
   `BreadcrumbList`, `ItemList`, `WebSite`
 - `sitemap.xml` generated at build time; `robots.txt` allows the major AI crawlers
-- `llms.txt` — a plain-text summary for AI assistants, including explicit notes that
+- `llms.txt` - a plain-text summary for AI assistants, including explicit notes that
   RedRock IT does not claim to make anyone HIPAA compliant and does not publish fixed
   pricing, so answer engines don't invent either
 - 404 page is `noindex` and excluded from the sitemap
@@ -104,15 +104,15 @@ structured-data penalty. Reviews link out to the Google Business Profile instead
 
 - [ ] **Confirm the Microsoft Form is set to "Anyone can respond."** Work accounts
       default to organization-only, which silently blocks every prospect.
-- [ ] **Remove the Number restriction on the Phone question** in Forms — it rejects
+- [ ] **Remove the Number restriction on the Phone question** in Forms - it rejects
       `(801) 562-2300` and any other formatted number.
 - [ ] **Verify the "15+ years" claim.** Inferred from a client review mentioning
       16 years; several pages use it.
 - [ ] **Have the legal pages reviewed.** Privacy, Terms and Refund policies are
-      drafted from supplied text plus standard clauses — not legal advice.
+      drafted from supplied text plus standard clauses - not legal advice.
 - [ ] **Swap the stock photography** for real photos of the team and offices. Keep
       the same filenames in `assets/img/` and nothing else needs to change.
-- [ ] Add a founder bio and team photo to `about.html` — the main thing that page
+- [ ] Add a founder bio and team photo to `about.html` - the main thing that page
       is still missing.
 - [ ] Submit `sitemap.xml` in Google Search Console.
 
@@ -137,5 +137,5 @@ privacy-policy.html   terms-conditions.html   refund-policy.html   404.html
 ```
 
 File names stay keyword-friendly for search even where the visible wording is
-plainer — `managed-it-services.html` is titled "Everyday IT Support" for readers but
+plainer - `managed-it-services.html` is titled "Everyday IT Support" for readers but
 still targets the phrase people actually search for.

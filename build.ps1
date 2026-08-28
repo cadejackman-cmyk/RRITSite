@@ -270,7 +270,7 @@ foreach ($p in $srcPages) {
             Loc      = $BASE + $canon
             LastMod  = Get-Date -Format 'yyyy-MM-dd'
             Priority = $(if ($p.Name -eq 'index.html') { '1.0' }
-                         elseif ($p.Name -match '^(services|industries|contact|pricing)\.html$') { '0.9' }
+                         elseif ($p.Name -match '^(services|industries|contact|pricing|it-support-[a-z-]+)\.html$') { '0.9' }
                          else { '0.8' })
         }
     }

@@ -187,6 +187,7 @@ foreach ($p in $srcPages) {
     if ($isPost) {
         $heading = if ($meta.ContainsKey('h1')) { $meta.h1 } else { ($meta.title -split '\|')[0].Trim() }
         $updated = if ($meta.ContainsKey('updated')) { $meta.updated } else { $meta.date }
+        $author  = if ($meta.ContainsKey('author'))  { $meta.author }  else { 'Cade Jackman' }
         $img     = if ($meta.ContainsKey('image')) { $BASE + $meta.image } else { $BASE + 'assets/img/og.jpg' }
         $extra = @"
 
@@ -205,7 +206,7 @@ foreach ($p in $srcPages) {
       "image":"$img",
       "mainEntityOfPage":{"@type":"WebPage","@id":"$BASE$($p.Rel)"},
       "url":"$BASE$($p.Rel)",
-      "author":{"@type":"Organization","name":"RedRock IT","url":"$BASE"},
+      "author":{"@type":"Person","name":"$(Jsn $author)"},
       "publisher":{
         "@type":"Organization",
         "name":"RedRock IT",

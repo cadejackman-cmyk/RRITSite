@@ -32,14 +32,24 @@
 <link rel="stylesheet" href="assets/css/site.css?v=e0ceabda">
 <script src="assets/js/site.js?v=607a5595" defer></script>
 
-<!-- Google tag (gtag.js) - placed after the stylesheet and font preloads so it
-     cannot compete with the LCP resources for bandwidth. -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-X7EZCBPR5H"></script>
+<!-- Google tag (gtag.js), deliberately loaded after window.load.
+     The standard in-head async snippet measured +1.61s LCP on PSI mobile
+     (3.38s -> 4.99s, score 91 -> 73): async stops it blocking the parser, but
+     not competing for bandwidth with the fonts and CSS while the page paints.
+     The gtag() calls below queue into dataLayer straight away and gtag.js drains
+     that queue when it arrives, so pageviews are still recorded, just stamped a
+     moment later. Visitors who leave before load fires are not counted. -->
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-X7EZCBPR5H');
+  addEventListener('load', function () {
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-X7EZCBPR5H';
+    document.head.appendChild(s);
+  });
 </script>
 
 <link rel="preconnect" href="https://forms.cloud.microsoft" crossorigin><link rel="dns-prefetch" href="https://forms.cloud.microsoft">

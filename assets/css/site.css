@@ -523,7 +523,8 @@ body.menu-open .drawer{transform:translateX(0)}
   .g-2,.g-3,.g-4,.quotes,.tiles,.plans,.steps,.field-2{grid-template-columns:1fr}
   .stats{grid-template-columns:repeat(2,1fr)}
   .callbar{display:flex}
-  body{padding-bottom:0}
+  /* reserve space for the fixed call bar so it cannot cover the footer */
+  body{padding-bottom:calc(78px + env(safe-area-inset-bottom))}
   .totop{bottom:78px;right:16px}
   .brand img{width:36px;height:36px}
   .brand-txt{font-size:1.06rem}

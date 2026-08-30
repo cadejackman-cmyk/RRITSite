@@ -159,6 +159,28 @@
     });
   });
 
+  /* ---- contact click tracking ---- */
+  /* Calls and emails are the real conversions for this business, and the contact
+     form is an embedded Microsoft Form we cannot see inside. gtag() is defined in
+     the head and queues into dataLayer, so these fire correctly even before
+     gtag.js has finished loading on the window load event. */
+  doc.addEventListener('click', function (e) {
+    if (typeof window.gtag !== 'function') return;
+    var el = e.target;
+    var a = el && el.closest ? el.closest('a[href^="tel:"], a[href^="mailto:"]') : null;
+    if (!a) return;
+    var tel = a.getAttribute('href').indexOf('tel:') === 0;
+    var where = a.closest('.callbar') ? 'call bar'
+              : (a.closest('.hdr') || a.closest('.util')) ? 'header'
+              : a.closest('.ftr') ? 'footer'
+              : 'page body';
+    window.gtag('event', tel ? 'contact_call' : 'contact_email', {
+      method: tel ? 'phone' : 'email',
+      link_location: where,
+      page_path: location.pathname
+    });
+  });
+
   /* ---- current year ---- */
   [].forEach.call(doc.querySelectorAll('[data-year]'), function (el) {
     el.textContent = new Date().getFullYear();

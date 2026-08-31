@@ -483,6 +483,12 @@ body.menu-open .drawer{transform:translateX(0)}
 .callbar.show{transform:translateY(0)}
 .callbar .btn{flex:1;padding:12px 14px;font-size:.9rem}
 
+/* Square headshots must not inherit the landscape media box - .split-media img
+   and .phero-split img both force aspect-ratio 4/3 with object-fit:cover, which
+   crops the top and bottom off a portrait. */
+.split-media img.portrait,
+.phero-split img.portrait{aspect-ratio:1/1;border-radius:50%;max-width:330px;margin-inline:auto;display:block}
+
 /* inline figures - diagrams are drawn as SVG in the markup, so they cost no
    extra request, stay sharp at any size and are readable by AI crawlers. */
 .fig-wrap{margin:28px 0 32px}

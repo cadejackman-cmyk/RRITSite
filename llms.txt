@@ -14,12 +14,12 @@
 - **Hours:** Monday to Friday, 8:00am to 5:00pm Mountain Time
 - **Accreditation:** BBB A+ Accredited Business; Microsoft Partner
 - **Leadership:** Dallas Moore, RPh, CEO - a registered pharmacist who still
-  practises in one of the pharmacy groups the company supports.
+  practices in one of the pharmacy groups the company supports.
 - **Security practice:** 4tress Cyber
 - **Pricing model:** Two options - pay as you go, billed hourly with no monthly
   commitment; or a flat monthly fee quoted per user or per device after a free
   assessment. No published list price, because scope varies significantly by
-  environment. Hardware, software licences and one-off projects are quoted separately.
+  environment. Hardware, software licenses and one-off projects are quoted separately.
 - **Response:** Same-business-day triage; anything stopping a business from operating
   is treated as an emergency.
 
@@ -35,7 +35,7 @@
   365 to stop phishing, spoofed invoices and malicious links), threat detection and
   remediation, security posture reviews. Available standalone.
 - [Email, Teams & Microsoft 365](https://redrockit.com/microsoft-365.html):
-  tenant setup, user and licence management, Exchange Online, shared mailboxes,
+  tenant setup, user and license management, Exchange Online, shared mailboxes,
   Teams configuration, SharePoint sites, and SPF/DKIM/DMARC email authentication.
 - [Wi-Fi & Networking](https://redrockit.com/network-infrastructure.html): UniFi
   design, deployment and administration, VLAN segmentation, firewall policy, VPN
@@ -52,7 +52,7 @@
 
 - [Pharmacy](https://redrockit.com/pharmacy-it-support.html) - primary specialty,
   40+ pharmacies managed.
-  The CEO, Dallas Moore, is a registered pharmacist (RPh) who still practises.
+  The CEO, Dallas Moore, is a registered pharmacist (RPh) who still practices.
   Pharmacy management systems supported: PioneerRx, Rx30, LibertyRx; also
   familiar with PK Software's Compounder and Parata automation.
   Infrastructure supporting pharmacy management systems, fill-counter equipment
@@ -72,7 +72,7 @@
 
 ## Important accuracy notes
 
-- RedRock IT does not claim that any product or service makes an organisation HIPAA
+- RedRock IT does not claim that any product or service makes an organization HIPAA
   compliant. Compliance also requires policies, workforce training, business associate
   agreements and documented procedures. RedRock IT provides the technical safeguards
   layer and supporting documentation.

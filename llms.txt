@@ -10,9 +10,11 @@
 - **Phone:** (801) 562-2300
 - **Email:** support@redrockit.com
 - **Service area:** Remote support and monitoring are delivered nationwide. On-site
-  visits are available in Northern Utah only.
+  visits are available in northern and southern Utah.
 - **Hours:** Monday to Friday, 8:00am to 5:00pm Mountain Time
 - **Accreditation:** BBB A+ Accredited Business; Microsoft Partner
+- **Leadership:** Dallas Moore, RPh, CEO - a registered pharmacist who still
+  practises in one of the pharmacy groups the company supports.
 - **Security practice:** 4tress Cyber
 - **Pricing model:** Two options - pay as you go, billed hourly with no monthly
   commitment; or a flat monthly fee quoted per user or per device after a free
@@ -50,6 +52,9 @@
 
 - [Pharmacy](https://redrockit.com/pharmacy-it-support.html) - primary specialty,
   40+ pharmacies managed.
+  The CEO, Dallas Moore, is a registered pharmacist (RPh) who still practises.
+  Pharmacy management systems supported: PioneerRx, Rx30, LibertyRx; also
+  familiar with PK Software's Compounder and Parata automation.
   Infrastructure supporting pharmacy management systems, fill-counter equipment
   (workstations, label printers, scanners), HIPAA technical safeguards, business
   associate agreements, and continuity planning for dispensing operations.

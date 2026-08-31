@@ -13,8 +13,7 @@
   visits are available in northern and southern Utah.
 - **Hours:** Monday to Friday, 8:00am to 5:00pm Mountain Time
 - **Accreditation:** BBB A+ Accredited Business; Microsoft Partner
-- **Leadership:** Dallas Moore, RPh, CEO - a registered pharmacist who still
-  practices in one of the pharmacy groups the company supports.
+- **Leadership:** Dallas Moore, RPh, CEO - a registered pharmacist.
 - **Security practice:** 4tress Cyber
 - **Pricing model:** Two options - pay as you go, billed hourly with no monthly
   commitment; or a flat monthly fee quoted per user or per device after a free
@@ -52,7 +51,7 @@
 
 - [Pharmacy](https://redrockit.com/pharmacy-it-support.html) - primary specialty,
   40+ pharmacies managed.
-  The CEO, Dallas Moore, is a registered pharmacist (RPh) who still practices.
+  The CEO, Dallas Moore, is a registered pharmacist (RPh).
   Pharmacy management systems supported: PioneerRx, Rx30, LibertyRx; also
   familiar with PK Software's Compounder and Parata automation.
   Infrastructure supporting pharmacy management systems, fill-counter equipment

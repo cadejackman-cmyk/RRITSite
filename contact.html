@@ -29,8 +29,8 @@
 
 <link rel="preload" href="assets/fonts/inter-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/manrope-800.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/css/site.css?v=fed2522a">
-<script src="assets/js/site.js?v=9cc32950" defer></script>
+<link rel="stylesheet" href="assets/css/site.css?v=3f4d25e6">
+<script src="assets/js/site.js?v=2d08fc1f" defer></script>
 
 <!-- Google tag (gtag.js), deliberately loaded after window.load.
      The standard in-head async snippet measured +1.61s LCP on PSI mobile
@@ -52,7 +52,7 @@
   });
 </script>
 
-<link rel="preconnect" href="https://forms.cloud.microsoft" crossorigin><link rel="dns-prefetch" href="https://forms.cloud.microsoft">
+
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -201,9 +201,92 @@
       <h2>Book a free IT check-up</h2>
       <p class="lead">Tell us roughly what you have and what keeps going wrong. We'll get back to you within one business day.</p>
     </div>
-    <p class="note u-mb-sm">By submitting this form you agree that RedRock IT may contact you by phone, text or email about your enquiry. Message and data rates may apply, and you can ask us to stop at any time. We do not sell your details - see our <a href="privacy-policy.html">Privacy Policy</a>.</p>
-    <iframe class="ms-form" title="Request your free IT check-up" src="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=oifGokVlrEeVQTPc4NsKOY1K6lSeTqNBtAdvlXUdrVRUQUFaM1JYRzBKVjVQVkJNTkUxRk1PQlY3Ny4u&amp;embed=true" referrerpolicy="no-referrer" loading="lazy"></iframe>
-    <p class="form-note center u-mt-sm">Form not loading? <a href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=oifGokVlrEeVQTPc4NsKOY1K6lSeTqNBtAdvlXUdrVRUQUFaM1JYRzBKVjVQVkJNTkUxRk1PQlY3Ny4u" target="_blank" rel="noopener">Open it in a new tab</a>, or just call <a href="tel:+18015622300">(801) 562-2300</a>.</p>
+    <form class="form" id="checkupForm" method="post" action="/api/contact" novalidate>
+      <div class="field-2">
+        <div class="field">
+          <label for="f-name">Your name <span class="req" aria-hidden="true">*</span></label>
+          <input id="f-name" name="name" type="text" autocomplete="name" maxlength="100" required aria-describedby="e-name">
+          <p class="msg" id="e-name"></p>
+        </div>
+        <div class="field">
+          <label for="f-company">Business name <span class="req" aria-hidden="true">*</span></label>
+          <input id="f-company" name="company" type="text" autocomplete="organization" maxlength="120" required aria-describedby="e-company">
+          <p class="msg" id="e-company"></p>
+        </div>
+      </div>
+
+      <div class="field-2">
+        <div class="field">
+          <label for="f-email">Email <span class="req" aria-hidden="true">*</span></label>
+          <input id="f-email" name="email" type="email" autocomplete="email" maxlength="254" required aria-describedby="e-email">
+          <p class="msg" id="e-email"></p>
+        </div>
+        <div class="field">
+          <label for="f-phone">Phone <span class="req" aria-hidden="true">*</span></label>
+          <input id="f-phone" name="phone" type="tel" autocomplete="tel" maxlength="30" required aria-describedby="e-phone">
+          <p class="msg" id="e-phone"></p>
+        </div>
+      </div>
+
+      <div class="field-2">
+        <div class="field">
+          <label for="f-size">How many people use computers? <span class="req" aria-hidden="true">*</span></label>
+          <select id="f-size" name="size" required aria-describedby="e-size">
+            <option value="">Choose one</option>
+            <option value="1-5">1 to 5</option>
+            <option value="6-15">6 to 15</option>
+            <option value="16-30">16 to 30</option>
+            <option value="31-50">31 to 50</option>
+            <option value="50+">More than 50</option>
+          </select>
+          <p class="msg" id="e-size"></p>
+        </div>
+        <div class="field">
+          <label for="f-reason">What is prompting this? <span class="req" aria-hidden="true">*</span></label>
+          <select id="f-reason" name="reason" required aria-describedby="e-reason">
+            <option value="">Choose one</option>
+            <option value="switching">Looking to switch IT providers</option>
+            <option value="no-support">No IT support at the moment</option>
+            <option value="specific-problem">A specific problem to solve</option>
+            <option value="security-compliance">Security or compliance</option>
+            <option value="exploring">Just exploring options</option>
+          </select>
+          <p class="msg" id="e-reason"></p>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="f-message">What keeps going wrong? <span class="req" aria-hidden="true">*</span></label>
+        <textarea id="f-message" name="message" maxlength="4000" required aria-describedby="e-message" placeholder="Roughly what you have and what you would like sorted. A sentence or two is plenty."></textarea>
+        <p class="msg" id="e-message"></p>
+      </div>
+
+      <div class="hp" aria-hidden="true">
+        <label for="f-website">Leave this field empty</label>
+        <input id="f-website" name="website" type="text" tabindex="-1" autocomplete="off">
+      </div>
+
+      <div class="field">
+        <div class="check">
+          <input id="f-consent" name="consent" type="checkbox" required aria-describedby="e-consent">
+          <label for="f-consent">I agree that RedRock IT may contact me by phone, text or email about this enquiry. Message and data rates may apply, and I can ask you to stop at any time. We do not sell your details - see our <a href="privacy-policy.html">Privacy Policy</a>.</label>
+        </div>
+        <p class="msg" id="e-consent"></p>
+      </div>
+
+      <p class="form-alert" id="formAlert" hidden></p>
+
+      <div class="btn-row">
+        <button class="btn btn-primary btn-lg" type="submit" id="formSubmit">Send it over</button>
+      </div>
+      <p class="form-note">We reply within one business day. Something broken right now? Call <a href="tel:+18015622300">(801) 562-2300</a> - that is always faster.</p>
+    </form>
+
+    <div class="form-done" id="formDone" hidden>
+      <svg class="tick" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="24"/><path d="M15 27l8 8 15-16"/></svg>
+      <h3>Thanks, that is with us</h3>
+      <p>We will come back to you within one business day, usually sooner. If it cannot wait, call <a href="tel:+18015622300">(801) 562-2300</a>.</p>
+    </div>
   </div>
 </section>
 

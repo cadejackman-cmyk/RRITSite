@@ -181,6 +181,91 @@
     });
   });
 
+  /* ---- contact form ---- */
+  /* Posts JSON to /api/contact, which nginx proxies to a small loopback service.
+     Field errors come back from the server and are rendered per field, so the
+     browser and the server never disagree about what is valid. */
+  (function () {
+    var form = doc.getElementById('checkupForm');
+    if (!form) return;
+    var done = doc.getElementById('formDone');
+    var alertBox = doc.getElementById('formAlert');
+    var btn = doc.getElementById('formSubmit');
+    var FIELDS = ['name','company','email','phone','size','reason','message','consent'];
+    var opened = Date.now();   // the server rejects anything submitted implausibly fast
+
+    function setErr(name, msg) {
+      var el = doc.getElementById('e-' + name);
+      if (!el) return;
+      el.textContent = msg || '';
+      var field = el.closest('.field');
+      if (field) field.classList.toggle('err', !!msg);
+    }
+    function clearErrs() {
+      FIELDS.forEach(function (n) { setErr(n, ''); });
+      alertBox.hidden = true;
+      alertBox.textContent = '';
+    }
+    function busy(on) {
+      if (on) {
+        btn.setAttribute('aria-busy', 'true');
+        btn.innerHTML = '<span class="spin"></span> Sending';
+      } else {
+        btn.removeAttribute('aria-busy');
+        btn.textContent = 'Send it over';
+      }
+    }
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      clearErrs();
+      busy(true);
+      var fd = new FormData(form);
+      var payload = {
+        name: fd.get('name'), company: fd.get('company'), email: fd.get('email'),
+        phone: fd.get('phone'), size: fd.get('size'), reason: fd.get('reason'),
+        message: fd.get('message'), consent: !!fd.get('consent'),
+        website: fd.get('website') || '', ts: opened
+      };
+
+      fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      }).then(function (r) {
+        return r.json().catch(function () { return {}; }).then(function (d) {
+          return { status: r.status, body: d };
+        });
+      }).then(function (res) {
+        if (res.body && res.body.ok) {
+          form.hidden = true;
+          done.hidden = false;
+          done.setAttribute('tabindex', '-1');
+          done.focus();
+          done.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          if (typeof window.gtag === 'function') {
+            window.gtag('event', 'contact_form', { method: 'form', page_path: location.pathname });
+          }
+          return;
+        }
+        var errs = (res.body && res.body.errors) || {};
+        var first = null;
+        Object.keys(errs).forEach(function (k) { setErr(k, errs[k]); if (!first) first = k; });
+        if (first) {
+          var el = doc.getElementById('f-' + first);
+          if (el) el.focus();
+        } else {
+          alertBox.textContent = (res.body && res.body.error) ||
+            'Something went wrong at our end. Please call (801) 562-2300 and we will pick it up.';
+          alertBox.hidden = false;
+        }
+      }).catch(function () {
+        alertBox.textContent = 'We could not reach the server. Please call (801) 562-2300.';
+        alertBox.hidden = false;
+      }).then(function () { busy(false); });
+    });
+  })();
+
   /* ---- current year ---- */
   [].forEach.call(doc.querySelectorAll('[data-year]'), function (el) {
     el.textContent = new Date().getFullYear();

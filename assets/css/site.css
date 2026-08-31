@@ -436,9 +436,8 @@ body.menu-open .drawer{transform:translateX(0)}
 /* Microsoft Forms does not report its height to the parent, so the frame is
    sized to fit the whole form. That removes the inner scrollbar and lets the
    page scroll normally. Re-measure if questions are added or removed. */
-.ms-form{display:block;width:100%;height:1820px;max-width:100%;border:0;border-radius:var(--r);background:transparent}
-@media (max-width:900px){.ms-form{height:2000px}}
-@media (max-width:760px){.ms-form{height:2240px;border-radius:var(--r-sm)}}
+@media (max-width:900px){}
+@media (max-width:760px){}
 
 /* ---------- Contact form ---------- */
 .form{display:grid;gap:16px}
@@ -450,6 +449,33 @@ body.menu-open .drawer{transform:translateX(0)}
 .field input:focus,.field select:focus,.field textarea:focus{outline:0;border-color:var(--brand);box-shadow:0 0 0 3px var(--brand-tint)}
 .field-2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 .form-note{font-size:.83rem;color:var(--ink-3);margin:0}
+
+/* form states: validation, the honeypot, the submit and the confirmation.
+   The honeypot is positioned off-canvas rather than display:none, because some
+   bots skip anything that is not rendered. It is aria-hidden and untabbable. */
+.hp{position:absolute!important;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
+.field .msg{font-size:.8rem;color:var(--brand);margin:0}
+.field.err input,.field.err select,.field.err textarea{border-color:var(--brand);background:var(--brand-tint)}
+.check{display:grid;grid-template-columns:auto 1fr;gap:11px;align-items:start}
+.check input{width:18px;height:18px;margin-top:3px;accent-color:var(--brand);padding:0}
+.check label{font-weight:400;font-size:.855rem;color:var(--ink-2);line-height:1.6}
+.form-alert{border:1px solid var(--brand);background:var(--brand-tint);color:var(--ink);border-radius:var(--r-sm);padding:13px 16px;font-size:.9rem}
+.btn[aria-busy=true]{pointer-events:none;opacity:.72}
+.spin{width:16px;height:16px;border:2px solid rgba(255,255,255,.45);border-top-color:#fff;border-radius:50%;animation:rr-spin .7s linear infinite;display:inline-block}
+@keyframes rr-spin{to{transform:rotate(360deg)}}
+.form-done{text-align:center;padding:38px 26px;border:1px solid var(--line);border-radius:var(--r-lg);background:var(--white);animation:rr-rise .5s cubic-bezier(.2,.7,.3,1) both}
+.form-done h3{margin-bottom:.35em}
+.form-done .tick{width:56px;height:56px;margin:0 auto 18px;display:block}
+.form-done .tick circle{stroke:var(--brand);stroke-width:2;fill:none;opacity:.28}
+.form-done .tick path{stroke:var(--brand);stroke-width:2.6;fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:26;stroke-dashoffset:26;animation:rr-draw .45s .18s ease-out forwards}
+@keyframes rr-rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes rr-draw{to{stroke-dashoffset:0}}
+@media (prefers-reduced-motion:reduce){
+  .form-done,.form-done .tick path,.spin{animation:none}
+  .form-done .tick path{stroke-dashoffset:0}
+}
+
+
 
 /* ---------- Pricing ---------- */
 .plans{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(18px,2vw,26px);align-items:start}

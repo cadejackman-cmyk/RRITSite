@@ -232,6 +232,15 @@
       return e;
     }
 
+    /* Clear a field's error the moment it is edited. Without this the messages
+       sit there accusing the visitor of mistakes they have already corrected. */
+    function clearOnEdit(ev) {
+      var n = ev.target && ev.target.name;
+      if (n && FIELDS.indexOf(n) !== -1) setErr(n, '');
+    }
+    form.addEventListener('input', clearOnEdit);
+    form.addEventListener('change', clearOnEdit);
+
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       clearErrs();

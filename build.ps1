@@ -192,6 +192,15 @@ foreach ($p in $srcPages) {
         $heading = if ($meta.ContainsKey('h1')) { $meta.h1 } else { ($meta.title -split '\|')[0].Trim() }
         $updated = if ($meta.ContainsKey('updated')) { $meta.updated } else { $meta.date }
         $author  = if ($meta.ContainsKey('author'))  { $meta.author }  else { 'Cade Jackman' }
+        # The house author resolves to a real Person node with a bio page and a
+        # LinkedIn sameAs; anyone else gets a bare name until they have the same.
+        $authorJson = if ($author -eq 'Cade Jackman') {
+            '{"@type":"Person","@id":"' + $BASE + '#cade-jackman","name":"Cade Jackman",' +
+            '"jobTitle":"Business Manager","url":"' + $BASE + 'author-cade-jackman.html",' +
+            '"sameAs":["https://www.linkedin.com/in/cade-jackman-0892bb252"]}'
+        } else {
+            '{"@type":"Person","name":"' + (Jsn $author) + '"}'
+        }
         $img     = if ($meta.ContainsKey('image')) { $BASE + $meta.image } else { $BASE + 'assets/img/og.jpg' }
         $extra = @"
 
@@ -210,7 +219,7 @@ foreach ($p in $srcPages) {
       "image":"$img",
       "mainEntityOfPage":{"@type":"WebPage","@id":"$BASE$($p.Rel)"},
       "url":"$BASE$($p.Rel)",
-      "author":{"@type":"Person","name":"$(Jsn $author)"},
+      "author":$authorJson,
       "publisher":{
         "@type":"Organization",
         "name":"RedRock IT",

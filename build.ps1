@@ -172,6 +172,10 @@ foreach ($p in $srcPages) {
     $h = $h.Replace('{{DESC}}',       (Enc $meta.desc))
     $h = $h.Replace('{{CANONICAL}}',  $canon)
     $h = $h.Replace('{{OGTYPE}}',     $(if ($isPost) { 'article' } else { 'website' }))
+    # A page may declare its own social image with an image: META key; everything
+    # else falls back to the shared card. og:image is what search and social
+    # previews actually render, so it has to track the same key the JSON-LD uses.
+    $h = $h.Replace('{{OGIMAGE}}',    $(if ($meta.ContainsKey('image')) { $BASE + $meta.image } else { $BASE + 'assets/img/og.jpg' }))
     $h = $h.Replace('{{ROBOTS}}',     $(if ($meta.ContainsKey('robots')) { $meta.robots } else { 'index,follow,max-image-preview:large' }))
     $h = $h.Replace('{{HEAD_EXTRA}}', $(if ($meta.ContainsKey('head'))   { $meta.head }   else { '' }))
     $h = $h.Replace('assets/css/site.css', "assets/css/site.css?v=$cssV")

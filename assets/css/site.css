@@ -483,6 +483,12 @@ body.menu-open .drawer{transform:translateX(0)}
 .callbar.show{transform:translateY(0)}
 .callbar .btn{flex:1;padding:12px 14px;font-size:.9rem}
 
+/* inline figures - diagrams are drawn as SVG in the markup, so they cost no
+   extra request, stay sharp at any size and are readable by AI crawlers. */
+.fig-wrap{margin:28px 0 32px}
+.fig{width:100%;height:auto;display:block}
+.fig-wrap figcaption{font-size:.86rem;color:var(--ink-2);margin-top:10px;line-height:1.5}
+
 /* back to top */
 .totop{position:fixed;right:20px;bottom:20px;z-index:94;width:42px;height:42px;border-radius:2px;background:var(--white);border:1px solid var(--line);box-shadow:var(--sh-2);display:grid;place-items:center;cursor:pointer;opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity .25s,transform .25s,visibility .25s}
 .totop.show{opacity:1;visibility:visible;transform:translateY(0)}

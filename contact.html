@@ -29,8 +29,8 @@
 
 <link rel="preload" href="assets/fonts/inter-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/manrope-800.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/css/site.css?v=3f4d25e6">
-<script src="assets/js/site.js?v=2d08fc1f" defer></script>
+<link rel="stylesheet" href="assets/css/site.css?v=65587ab5">
+<script src="assets/js/site.js?v=4599037d" defer></script>
 
 <!-- Google tag (gtag.js), deliberately loaded after window.load.
      The standard in-head async snippet measured +1.61s LCP on PSI mobile
@@ -230,16 +230,17 @@
 
       <div class="field-2">
         <div class="field">
-          <label for="f-size">How many people use computers? <span class="req" aria-hidden="true">*</span></label>
-          <select id="f-size" name="size" required aria-describedby="e-size">
+          <label for="f-industry">What kind of business? <span class="req" aria-hidden="true">*</span></label>
+          <select id="f-industry" name="industry" required aria-describedby="e-industry">
             <option value="">Choose one</option>
-            <option value="1-5">1 to 5</option>
-            <option value="6-15">6 to 15</option>
-            <option value="16-30">16 to 30</option>
-            <option value="31-50">31 to 50</option>
-            <option value="50+">More than 50</option>
+            <option value="pharmacy">Pharmacy</option>
+            <option value="construction">Construction or manufacturing</option>
+            <option value="property">Property management</option>
+            <option value="medical">Medical or dental</option>
+            <option value="professional">Professional services</option>
+            <option value="other">Something else</option>
           </select>
-          <p class="msg" id="e-size"></p>
+          <p class="msg" id="e-industry"></p>
         </div>
         <div class="field">
           <label for="f-reason">What is prompting this? <span class="req" aria-hidden="true">*</span></label>

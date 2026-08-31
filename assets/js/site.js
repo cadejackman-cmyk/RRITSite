@@ -191,7 +191,7 @@
     var done = doc.getElementById('formDone');
     var alertBox = doc.getElementById('formAlert');
     var btn = doc.getElementById('formSubmit');
-    var FIELDS = ['name','company','email','phone','size','reason','message','consent'];
+    var FIELDS = ['name','company','email','phone','industry','reason','message','consent'];
     var opened = Date.now();   // the server rejects anything submitted implausibly fast
 
     function setErr(name, msg) {
@@ -216,17 +216,42 @@
       }
     }
 
+    /* Checked here as well as on the server so an obviously incomplete form
+       never leaves the browser. The server stays the authority; this only
+       saves a round trip and answers instantly. */
+    function localCheck(p) {
+      var e = {};
+      if (!p.name || p.name.trim().length < 2) e.name = 'Please tell us your name.';
+      if (!p.company || p.company.trim().length < 2) e.company = 'Please tell us your business name.';
+      if (!p.email || !/^[^@\s]+@[^@\s]+\.[A-Za-z]{2,}$/.test(p.email)) e.email = 'That email address does not look right.';
+      if (!p.phone || !/^[0-9 ()+.\-]{7,30}$/.test(p.phone)) e.phone = 'Please give a phone number we can reach you on.';
+      if (!p.industry) e.industry = 'Please choose an option.';
+      if (!p.reason) e.reason = 'Please choose an option.';
+      if (!p.message || p.message.trim().length < 10) e.message = 'A sentence or two is enough, but we need something.';
+      if (!p.consent) e.consent = 'We need your agreement before we can contact you.';
+      return e;
+    }
+
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       clearErrs();
-      busy(true);
       var fd = new FormData(form);
       var payload = {
         name: fd.get('name'), company: fd.get('company'), email: fd.get('email'),
-        phone: fd.get('phone'), size: fd.get('size'), reason: fd.get('reason'),
+        phone: fd.get('phone'), industry: fd.get('industry'), reason: fd.get('reason'),
         message: fd.get('message'), consent: !!fd.get('consent'),
         website: fd.get('website') || '', ts: opened
       };
+
+      var local = localCheck(payload);
+      var badKeys = Object.keys(local);
+      if (badKeys.length) {
+        badKeys.forEach(function (k) { setErr(k, local[k]); });
+        var el0 = doc.getElementById('f-' + badKeys[0]);
+        if (el0) el0.focus();
+        return;
+      }
+      busy(true);
 
       fetch('/api/contact', {
         method: 'POST',

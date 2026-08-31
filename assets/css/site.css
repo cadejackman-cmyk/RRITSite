@@ -439,6 +439,10 @@ body.menu-open .drawer{transform:translateX(0)}
 @media (max-width:900px){}
 @media (max-width:760px){}
 
+/* .form sets display:grid, which outranks the user-agent [hidden] rule, so
+   toggling .hidden on the form did nothing until this existed. */
+[hidden]{display:none!important}
+
 /* ---------- Contact form ---------- */
 .form{display:grid;gap:16px}
 .field{display:grid;gap:7px}

@@ -24,6 +24,7 @@ nav: contact
       <p class="lead">A question, a quote, a second opinion, or something you would rather hand over. We reply within one business day, and the free IT check-up is there if you want it.</p>
     </div>
     <form class="form" id="checkupForm" method="post" action="/api/contact" novalidate>
+      <input type="hidden" name="source" value="contact">
       <div class="field-2">
         <div class="field">
           <label for="f-name">Your name <span class="req" aria-hidden="true">*</span></label>

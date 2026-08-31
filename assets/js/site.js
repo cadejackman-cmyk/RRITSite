@@ -249,7 +249,8 @@
         name: fd.get('name'), company: fd.get('company'), email: fd.get('email'),
         phone: fd.get('phone'), industry: fd.get('industry'), reason: fd.get('reason'),
         message: fd.get('message'), consent: !!fd.get('consent'),
-        website: fd.get('website') || '', ts: opened
+        website: fd.get('website') || '', ts: opened,
+        source: fd.get('source') || 'contact'
       };
 
       var local = localCheck(payload);

@@ -1,0 +1,229 @@
+<!--META
+title: Free IT Check-Up for Utah Businesses | RedRock IT
+desc: A free check of your computers, servers, network and backups, with a written report of what is fine, what is aging and what is at risk. About an hour of your time. The report is yours to keep.
+-->
+
+<section class="phero">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a href="index.html">Home</a>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+      <span>Free IT check-up</span>
+    </nav>
+    <span class="eyebrow">No cost, no obligation</span>
+    <h1>Find out what you are actually running</h1>
+    <p class="proof"><b>~1 hour</b> <span>of your time</span></p>
+    <p class="lead">We look at your computers, servers, network and backups, then write down what is fine, what is aging and what is at risk. The report is yours to keep whether you hire us or not.</p>
+    <div class="btn-row">
+      <a class="btn btn-primary btn-lg" href="#book">Book a check-up</a>
+      <a class="btn btn-outline btn-lg" href="tel:+18015622300">(801) 562-2300</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="eyebrow">What we look at</span>
+      <h2>Four things, honestly assessed</h2>
+      <p class="lead measure">Not a sales audit dressed up as a favour. A straight look at the equipment you depend on.</p>
+    </div>
+    <div class="grid g-4">
+      <div class="card rv">
+        <h3>Computers</h3>
+        <p>Age, condition, what is still under warranty, what is running an operating system that stopped getting security updates, and what will need replacing this year.</p>
+      </div>
+      <div class="card rv" data-rv="70">
+        <h3>Servers</h3>
+        <p>What is running on them, how they are patched, whether anything critical is sitting on hardware old enough to be a risk on its own.</p>
+      </div>
+      <div class="card rv" data-rv="140">
+        <h3>Network</h3>
+        <p>Wi-Fi coverage and the equipment behind it, the firewall, how remote access is handled, and who can reach what.</p>
+      </div>
+      <div class="card rv" data-rv="210">
+        <h3>Backups</h3>
+        <p>Whether they are running, whether anyone has tested a restore, and whether ransomware could reach them. This is the one that surprises people most often.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sand bordered">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="eyebrow">How it works</span>
+      <h2>Four steps, and most of the work is ours</h2>
+    </div>
+    <div class="steps">
+      <div class="step rv"><h3>You ask</h3><p>Fill in the form below or call us. No sales process to sit through first.</p></div>
+      <div class="step rv" data-rv="70"><h3>A short call</h3><p>We agree how we get a look at things, whether that is someone coming out or remote access you set up with us.</p></div>
+      <div class="step rv" data-rv="140"><h3>The check-up</h3><p>About an hour of your time. Most of the work happens at our end afterwards, without you needing to be involved.</p></div>
+      <div class="step rv" data-rv="210"><h3>Your report</h3><p>Written up within a few days, in plain English, ordered by what matters most. Yours to keep.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap-sm prose">
+    <h2>What you get out of it</h2>
+    <p>A written picture of your setup: what is fine and can be left alone, what is aging and should be budgeted for, and what is an actual risk right now. Ordered so you can see what to deal with first.</p>
+    <p>There is no obligation attached to it. If you read the report and fix everything yourself, that is genuinely fine, and it happens. If you would rather hand it over, the report is also what our quote is built from, because we do not put a number on anything before we have looked at it.</p>
+    <p>Most people are surprised by the backups. We frequently find backups that stopped running months earlier, or that were never covering the thing the business could least afford to lose.</p>
+  </div>
+</section>
+
+<section class="sec sand bordered" id="book">
+  <div class="wrap-sm">
+    <div class="sec-head center">
+      <h2>Book your free check-up</h2>
+      <p class="lead">Tell us roughly what you have. We reply within one business day.</p>
+    </div>
+
+    <form class="form" id="checkupForm" method="post" action="/api/contact" novalidate>
+      <input type="hidden" name="source" value="checkup">
+      <div class="field-2">
+        <div class="field">
+          <label for="f-name">Your name <span class="req" aria-hidden="true">*</span></label>
+          <input id="f-name" name="name" type="text" autocomplete="name" maxlength="100" required aria-describedby="e-name">
+          <p class="msg" id="e-name"></p>
+        </div>
+        <div class="field">
+          <label for="f-company">Business name <span class="req" aria-hidden="true">*</span></label>
+          <input id="f-company" name="company" type="text" autocomplete="organization" maxlength="120" required aria-describedby="e-company">
+          <p class="msg" id="e-company"></p>
+        </div>
+      </div>
+
+      <div class="field-2">
+        <div class="field">
+          <label for="f-email">Email <span class="req" aria-hidden="true">*</span></label>
+          <input id="f-email" name="email" type="email" autocomplete="email" maxlength="254" required aria-describedby="e-email">
+          <p class="msg" id="e-email"></p>
+        </div>
+        <div class="field">
+          <label for="f-phone">Phone <span class="req" aria-hidden="true">*</span></label>
+          <input id="f-phone" name="phone" type="tel" autocomplete="tel" maxlength="30" required aria-describedby="e-phone">
+          <p class="msg" id="e-phone"></p>
+        </div>
+      </div>
+
+      <div class="field-2">
+        <div class="field">
+          <label for="f-industry">What kind of business? <span class="req" aria-hidden="true">*</span></label>
+          <select id="f-industry" name="industry" required aria-describedby="e-industry">
+            <option value="">Choose one</option>
+            <option value="pharmacy">Pharmacy</option>
+            <option value="construction">Construction or manufacturing</option>
+            <option value="property">Property management</option>
+            <option value="medical">Medical or dental</option>
+            <option value="professional">Professional services</option>
+            <option value="other">Something else</option>
+          </select>
+          <p class="msg" id="e-industry"></p>
+        </div>
+        <div class="field">
+          <label for="f-reason">What is prompting this? <span class="req" aria-hidden="true">*</span></label>
+          <select id="f-reason" name="reason" required aria-describedby="e-reason">
+            <option value="">Choose one</option>
+            <option value="switching">Looking to switch IT providers</option>
+            <option value="no-support">No IT support at the moment</option>
+            <option value="specific-problem">A specific problem to solve</option>
+            <option value="security-compliance">Security or compliance</option>
+            <option value="exploring">Just exploring options</option>
+            <option value="other">Something else</option>
+          </select>
+          <p class="msg" id="e-reason"></p>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="f-message">Anything we should know first? <span class="req" aria-hidden="true">*</span></label>
+        <textarea id="f-message" name="message" maxlength="4000" required aria-describedby="e-message" placeholder="Roughly how many computers, whether you run servers, and anything that keeps going wrong. A sentence or two is plenty."></textarea>
+        <p class="msg" id="e-message"></p>
+      </div>
+
+      <div class="hp" aria-hidden="true">
+        <label for="f-website">Leave this field empty</label>
+        <input id="f-website" name="website" type="text" tabindex="-1" autocomplete="off">
+      </div>
+
+      <div class="field">
+        <div class="check">
+          <input id="f-consent" name="consent" type="checkbox" required aria-describedby="e-consent">
+          <label for="f-consent">I agree that RedRock IT may contact me by phone, text or email about this enquiry. Message and data rates may apply, and I can ask you to stop at any time. We do not sell your details - see our <a href="privacy-policy.html">Privacy Policy</a>.</label>
+        </div>
+        <p class="msg" id="e-consent"></p>
+      </div>
+
+      <p class="form-alert" id="formAlert" hidden></p>
+
+      <div class="btn-row">
+        <button class="btn btn-primary btn-lg" type="submit" id="formSubmit">Book my check-up</button>
+      </div>
+      <p class="form-note">We reply within one business day. Prefer to talk? Call <a href="tel:+18015622300">(801) 562-2300</a>.</p>
+    </form>
+
+    <div class="form-done" id="formDone" hidden>
+      <svg class="tick" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="24"/><path d="M15 27l8 8 15-16"/></svg>
+      <h3>Thanks, that is with us</h3>
+      <p>We will come back to you within one business day to arrange a short call. If it cannot wait, ring <a href="tel:+18015622300">(801) 562-2300</a>.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap-sm">
+    <div class="sec-head center">
+      <span class="eyebrow">Questions</span>
+      <h2>Common questions</h2>
+    </div>
+    <div class="faq">
+      <details open>
+        <summary>Is it actually free, or is there a catch?</summary>
+        <div class="faq-a"><p>It is free and the report is yours to keep. If you read it and fix everything yourself, that is genuinely fine. We would rather be the company that told you the truth than the one that sold you something you did not need.</p></div>
+      </details>
+      <details>
+        <summary>How much of our time does it take?</summary>
+        <div class="faq-a"><p>About an hour, usually with whoever knows where things are. After that most of the work happens at our end and you do not need to be involved.</p></div>
+      </details>
+      <details>
+        <summary>What access do you need?</summary>
+        <div class="faq-a"><p>We agree that on a short call first. Depending on your setup that is either someone coming on site or remote access you set up with us. We do not need anything before that conversation.</p></div>
+      </details>
+      <details>
+        <summary>Do we have to switch providers afterwards?</summary>
+        <div class="faq-a"><p>No. There is no obligation and no contract attached to the check-up. If you already have an IT company and just want a second opinion, that is a perfectly normal reason to ask for one.</p></div>
+      </details>
+      <details>
+        <summary>How soon do we get the report?</summary>
+        <div class="faq-a"><p>Within a few days of the check-up. It is written in plain English and ordered by what matters most, not by what is easiest to sell.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {
+      "@type":"Service",
+      "name":"Free IT check-up",
+      "serviceType":"IT assessment",
+      "provider":{"@id":"https://redrockit.com/#org"},
+      "areaServed":[{"@type":"Country","name":"United States"},{"@type":"State","name":"Utah"}],
+      "description":"A free assessment of a small business's computers, servers, network and backups, delivered as a written report of what is fine, what is aging and what is at risk. Around an hour of the client's time, with the report supplied within a few days and no obligation attached.",
+      "offers":{"@type":"Offer","price":"0","priceCurrency":"USD","availability":"https://schema.org/InStock"},
+      "url":"https://redrockit.com/free-it-check-up.html"
+    },
+    {
+      "@type":"BreadcrumbList",
+      "itemListElement":[
+        {"@type":"ListItem","position":1,"name":"Home","item":"https://redrockit.com/"},
+        {"@type":"ListItem","position":2,"name":"Free IT check-up","item":"https://redrockit.com/free-it-check-up.html"}
+      ]
+    }
+  ]
+}
+</script>

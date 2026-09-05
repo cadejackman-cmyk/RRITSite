@@ -623,3 +623,8 @@ body.menu-open .drawer{transform:translateX(0)}
 /* Marks a field as optional. The required marker is a red asterisk, so this
    deliberately reads as quiet type rather than a second piece of punctuation. */
 .opt{font-weight:400;font-size:.82em;color:var(--muted,#6b635c);letter-spacing:.01em}
+
+/* Trademark attribution. Deliberately quiet - it is there to rebut any
+   suggestion of affiliation, not to be read. Sits above the closing CTA. */
+.tm-note{font-size:.78rem;line-height:1.55;color:var(--ink-3);opacity:.85;
+         border-top:1px solid var(--line);padding-top:16px;margin:0}

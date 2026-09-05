@@ -628,3 +628,12 @@ body.menu-open .drawer{transform:translateX(0)}
    suggestion of affiliation, not to be read. Sits above the closing CTA. */
 .tm-note{font-size:.78rem;line-height:1.55;color:var(--ink-3);opacity:.85;
          border-top:1px solid var(--line);padding-top:16px;margin:0}
+
+/* A single point inside prose that must not be skimmed past - a deadline, a
+   legal trap. Uses the brand tint rather than .facts' sand so it reads as an
+   interruption to the argument rather than a summary of it. */
+.callout{background:var(--brand-tint);border:1px solid var(--brand-line);
+         border-left:3px solid var(--brand);border-radius:var(--r-sm);
+         padding:clamp(16px,1.8vw,22px);margin:24px 0}
+.callout p{margin:0}
+.callout p+p{margin-top:10px}

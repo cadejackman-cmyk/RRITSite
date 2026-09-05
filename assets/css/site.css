@@ -411,14 +411,18 @@ body.menu-open .drawer{transform:translateX(0)}
 
 /* ---------- Footer ---------- */
 .ftr{background:var(--dark);color:rgba(255,255,255,.62);font-size:.915rem;padding-top:clamp(52px,5.5vw,76px)}
-.ftr h3{color:#fff;font-size:.755rem;letter-spacing:.13em;text-transform:uppercase;margin-bottom:18px;font-family:var(--ff);font-weight:600;color:rgba(255,255,255,.45)}
+.ftr h3{font-size:.755rem;letter-spacing:.13em;text-transform:uppercase;margin-bottom:18px;font-family:var(--ff);font-weight:600;color:rgba(255,255,255,.55)}
 .ftr a{color:rgba(255,255,255,.66);text-decoration:none}
 .ftr a:hover{color:#fff}
 .ftr-grid{display:grid;grid-template-columns:1.55fr 1fr 1fr 1.25fr;gap:clamp(28px,3.5vw,48px);padding-bottom:48px}
 .ftr ul{list-style:none;padding:0;margin:0}
 .ftr li{margin-bottom:11px}
 .ftr-brand .brand-txt{color:#fff}
-.ftr-brand .brand-sub{color:rgba(255,255,255,.4)}
+.ftr-brand .brand-sub{color:rgba(255,255,255,.55)}
+/* The brand mark's red is #8b0f0a, which reads at 1.75:1 on the dark footer -
+   far under the 4.5:1 minimum. #e8918b is the lighter red this stylesheet
+   already uses for footer icons and dark-band eyebrows, and clears 7:1. */
+.ftr-brand .brand-txt .r{color:#e8918b}
 .ftr-about{margin:20px 0;max-width:38ch;line-height:1.65;font-size:.9rem}
 .ftr-badges{display:flex;align-items:center;gap:16px;margin-top:22px}
 .ftr-badges img{height:40px;width:auto;background:#fff;border-radius:2px;padding:5px 8px}

@@ -221,6 +221,15 @@
       alertBox.hidden = true;
       alertBox.textContent = '';
     }
+    /* #formAlert carries role="alert". A live region only announces changes that
+       happen while it is in the accessibility tree, so it has to be revealed
+       before the text is written, not after - otherwise a screen reader user
+       never hears that the send failed or that they should ring instead. */
+    function showAlert(msg) {
+      alertBox.hidden = false;
+      alertBox.textContent = msg;
+    }
+
     function busy(on) {
       if (on) {
         btn.setAttribute('aria-busy', 'true');
@@ -285,8 +294,7 @@
          without one is rejected server-side and spooled without an email, so
          hold the visitor here for a second rather than losing their enquiry. */
       if (tsHost && !payload['cf-turnstile-response']) {
-        alertBox.textContent = 'Just a moment while we check your browser, then try that again.';
-        alertBox.hidden = false;
+        showAlert('Just a moment while we check your browser, then try that again.');
         return;
       }
       busy(true);
@@ -318,13 +326,11 @@
           var el = doc.getElementById('f-' + first);
           if (el) el.focus();
         } else {
-          alertBox.textContent = (res.body && res.body.error) ||
-            'Something went wrong at our end. Please call (801) 562-2300 and we will pick it up.';
-          alertBox.hidden = false;
+          showAlert((res.body && res.body.error) ||
+            'Something went wrong at our end. Please call (801) 562-2300 and we will pick it up.');
         }
       }).catch(function () {
-        alertBox.textContent = 'We could not reach the server. Please call (801) 562-2300.';
-        alertBox.hidden = false;
+        showAlert('We could not reach the server. Please call (801) 562-2300.');
       }).then(function () {
         busy(false);
         /* Tokens are consumed on use. If the form is still showing we did not

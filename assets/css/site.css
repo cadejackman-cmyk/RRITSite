@@ -611,3 +611,7 @@ body.menu-open .drawer{transform:translateX(0)}
 /* Cloudflare Turnstile sits between the last field and the submit button.
    Reserve its height so the button does not jump when the widget renders. */
 .cf-turnstile{margin:2px 0 4px;min-height:65px}
+
+/* Marks a field as optional. The required marker is a red asterisk, so this
+   deliberately reads as quiet type rather than a second piece of punctuation. */
+.opt{font-weight:400;font-size:.82em;color:var(--muted,#6b635c);letter-spacing:.01em}

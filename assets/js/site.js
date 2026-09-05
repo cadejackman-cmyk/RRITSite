@@ -239,7 +239,10 @@
       if (!p.name || p.name.trim().length < 2) e.name = 'Please tell us your name.';
       if (!p.company || p.company.trim().length < 2) e.company = 'Please tell us your business name.';
       if (!p.email || !/^[^@\s]+@[^@\s]+\.[A-Za-z]{2,}$/.test(p.email)) e.email = 'That email address does not look right.';
-      if (!p.phone || !/^[0-9 ()+.\-]{7,30}$/.test(p.phone)) e.phone = 'Please give a phone number we can reach you on.';
+      /* Optional. A referred visitor who just wants to ask a question should not
+         have to hand over a phone number first; email is enough to reply. Still
+         checked when supplied, so a typo is caught rather than silently kept. */
+      if (p.phone && p.phone.trim() && !/^[0-9 ()+.\-]{7,30}$/.test(p.phone)) e.phone = 'That phone number does not look right. Leave it blank if you would rather we emailed.';
       if (!p.industry) e.industry = 'Please choose an option.';
       if (!p.reason) e.reason = 'Please choose an option.';
       if (!p.message || p.message.trim().length < 10) e.message = 'A sentence or two is enough, but we need something.';

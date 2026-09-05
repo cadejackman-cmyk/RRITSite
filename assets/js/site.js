@@ -191,8 +191,23 @@
     var done = doc.getElementById('formDone');
     var alertBox = doc.getElementById('formAlert');
     var btn = doc.getElementById('formSubmit');
+    var btnLabel = btn.textContent;   // the two forms label this button differently
     var FIELDS = ['name','company','email','phone','industry','reason','message','consent'];
     var opened = Date.now();   // the server rejects anything submitted implausibly fast
+
+    /* Turnstile is loaded from here rather than the shared head partial so the
+       twenty-three pages without a form never pay for the request. The implicit
+       renderer finds the .cf-turnstile div and writes its token into a hidden
+       input named cf-turnstile-response inside the form. */
+    var tsHost = form.querySelector('.cf-turnstile');
+    if (tsHost && !doc.getElementById('cf-turnstile-api')) {
+      var tsScript = doc.createElement('script');
+      tsScript.id = 'cf-turnstile-api';
+      tsScript.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js';
+      tsScript.async = true;
+      tsScript.defer = true;
+      doc.head.appendChild(tsScript);
+    }
 
     function setErr(name, msg) {
       var el = doc.getElementById('e-' + name);
@@ -212,7 +227,7 @@
         btn.innerHTML = '<span class="spin"></span> Sending';
       } else {
         btn.removeAttribute('aria-busy');
-        btn.textContent = 'Send it over';
+        btn.textContent = btnLabel;
       }
     }
 
@@ -250,7 +265,8 @@
         phone: fd.get('phone'), industry: fd.get('industry'), reason: fd.get('reason'),
         message: fd.get('message'), consent: !!fd.get('consent'),
         website: fd.get('website') || '', ts: opened,
-        source: fd.get('source') || 'contact'
+        source: fd.get('source') || 'contact',
+        'cf-turnstile-response': fd.get('cf-turnstile-response') || ''
       };
 
       var local = localCheck(payload);
@@ -259,6 +275,15 @@
         badKeys.forEach(function (k) { setErr(k, local[k]); });
         var el0 = doc.getElementById('f-' + badKeys[0]);
         if (el0) el0.focus();
+        return;
+      }
+
+      /* A Turnstile token takes a moment to issue and is single-use. Submitting
+         without one is rejected server-side and spooled without an email, so
+         hold the visitor here for a second rather than losing their enquiry. */
+      if (tsHost && !payload['cf-turnstile-response']) {
+        alertBox.textContent = 'Just a moment while we check your browser, then try that again.';
+        alertBox.hidden = false;
         return;
       }
       busy(true);
@@ -297,7 +322,14 @@
       }).catch(function () {
         alertBox.textContent = 'We could not reach the server. Please call (801) 562-2300.';
         alertBox.hidden = false;
-      }).then(function () { busy(false); });
+      }).then(function () {
+        busy(false);
+        /* Tokens are consumed on use. If the form is still showing we did not
+           succeed, so issue a fresh one or the next attempt fails. */
+        if (!form.hidden && window.turnstile && tsHost) {
+          try { window.turnstile.reset(tsHost); } catch (err) {}
+        }
+      });
     });
   })();
 

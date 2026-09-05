@@ -332,6 +332,10 @@ body.menu-open .drawer{transform:translateX(0)}
 .stat .n{font-family:var(--fh);font-size:clamp(1.9rem,1.5rem+1.5vw,2.7rem);font-weight:800;color:var(--brand);line-height:1;letter-spacing:-.035em;margin-bottom:9px}
 .stat .t{font-size:.885rem;color:var(--ink-3);line-height:1.45;margin:0}
 .stats-2{grid-template-columns:repeat(2,1fr)}
+/* Six stats read better as two rows of three than one cramped row of six.
+   Below 1080px the existing .stats media rule takes over at two columns,
+   which divides six evenly. */
+.stats-6{grid-template-columns:repeat(3,1fr)}
 .stats-2 .stat{padding:clamp(24px,2.6vw,34px)}
 .stats-dark{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.13)}
 .stats-dark .stat{background:var(--dark)}

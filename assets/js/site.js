@@ -292,7 +292,7 @@
 
       /* A Turnstile token takes a moment to issue and is single-use. Submitting
          without one is rejected server-side and spooled without an email, so
-         hold the visitor here for a second rather than losing their enquiry. */
+         hold the visitor here for a second rather than losing their inquiry. */
       if (tsHost && !payload['cf-turnstile-response']) {
         showAlert('Just a moment while we check your browser, then try that again.');
         return;

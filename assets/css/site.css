@@ -623,7 +623,7 @@ body.menu-open .drawer{transform:translateX(0)}
 
 /* Trademark attribution. Deliberately quiet - it is there to rebut any
    suggestion of affiliation, not to be read. Sits above the closing CTA. */
-.tm-note{font-size:.78rem;line-height:1.55;color:var(--ink-3);opacity:.85;
+.tm-note{font-size:.78rem;line-height:1.55;color:var(--ink-3);
          border-top:1px solid var(--line);padding-top:16px;margin:0}
 
 /* A single point inside prose that must not be skimmed past - a deadline, a

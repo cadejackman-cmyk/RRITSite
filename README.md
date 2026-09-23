@@ -56,6 +56,10 @@ Structured data (JSON-LD) sits inline at the foot of each page source.
   third-party requests apart from the embedded Microsoft Form on the contact page.
 - **Images are WebP**, sized to their display size, with `width`/`height` set so the
   page doesn't reflow while loading.
+  Content photos also ship `-480` and `-720` copies used through `srcset`, so phones
+  don't download the full-size file. Regenerate both copies if a photo is replaced.
+- **Social images** are 1200x630 JPEGs (`assets/img/og-*.jpg`), set per page with an
+  `image:` line in the `META` block. Pages without one fall back to `og.jpg`.
 
 ## Deploying
 

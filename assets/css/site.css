@@ -427,6 +427,7 @@ body.menu-open .drawer{transform:translateX(0)}
 .ftr-loc .nm{color:#fff;font-weight:600;font-size:.885rem;margin-bottom:3px;display:flex;align-items:center;gap:7px}
 .ftr-loc .nm svg{width:14px;height:14px;color:#e8918b}
 .ftr-loc address{font-style:normal;font-size:.87rem;line-height:1.6;padding-left:21px}
+.ftr-loc>a{display:block;font-size:.87rem;padding-left:21px}
 .ftr-tel{display:flex;flex-direction:column;gap:9px;margin-top:6px}
 .ftr-tel a{display:inline-flex;align-items:center;gap:9px;color:#fff;font-weight:600}
 .ftr-tel svg{width:15px;height:15px;color:#e8918b;flex:none}

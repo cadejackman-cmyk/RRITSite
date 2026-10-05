@@ -119,7 +119,7 @@
   /* close drawer when navigating to an in-page anchor */
   [].forEach.call(doc.querySelectorAll('.drawer a[href]'), function (a) {
     a.addEventListener('click', function () {
-      if (a.getAttribute('href').charAt(0) === '#') toggleDrawer(false);
+      if (a.hash && a.pathname === location.pathname) toggleDrawer(false);
     });
   });
 
